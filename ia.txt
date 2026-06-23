@@ -1,3 +1,6 @@
 Etapa 1: se uso IA para organizar el proyecto base, preparar los datos iniciales y verificar los pasos solicitados.
 Etapa 2: se uso IA para crear el componente LibroCard con props, PropTypes, valores por defecto y estilos basicos de tarjetas y estados.
 Etapa 3: se uso IA para crear ListaLibros, recorrer el catalogo con map y renderizar LibroCard usando key por id.
+Etapa 4: se uso IA para agregar estado controlado, filtro por estado, busqueda normalizada y mensaje condicional sin resultados.
+Parte A: se uso IA como apoyo para organizar la estructura del proyecto, revisar requisitos y mantener buenas practicas sin consumir APIs ni guardar datos locales.
+Etapa 5: se uso IA para destacar novedades, agregar contador, preparar ANALISIS.md, actualizar README.md y verificar los requisitos finales.

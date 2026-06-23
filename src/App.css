@@ -19,6 +19,65 @@
   color: #5f6b7a;
 }
 
+.contador-novedades {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 12px;
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: #1b4d89;
+  background: #d8ecff;
+  font-weight: 700;
+}
+
+.controles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #2f3d50;
+  font-weight: 700;
+}
+
+.control input,
+.control select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #c7d0dd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #172033;
+  background: #ffffff;
+  font: inherit;
+}
+
+.control input:focus,
+.control select:focus {
+  outline: 3px solid #b9d7ff;
+  border-color: #3a79c9;
+}
+
+.sin-resultados {
+  margin: 0;
+  padding: 24px;
+  border: 1px dashed #aeb9c8;
+  border-radius: 8px;
+  color: #405168;
+  background: #ffffff;
+  text-align: center;
+}
+
 .lista-libros {
   display: grid;
   gap: 16px;
@@ -34,6 +93,11 @@
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 10px 30px rgba(23, 32, 51, 0.08);
+}
+
+.libro-card--nuevo {
+  border-color: #7ab7ee;
+  background: #f4fbff;
 }
 
 .libro-card__header {
@@ -96,13 +160,17 @@
 }
 
 .novedad {
-  color: #1b4d89;
-  background: #d8ecff;
+  color: #ffffff;
+  background: #1b4d89;
 }
 
 @media (max-width: 640px) {
   .app {
     padding: 32px 16px;
+  }
+
+  .controles {
+    grid-template-columns: 1fr;
   }
 
   .libro-card__header {

@@ -13,7 +13,7 @@ function LibroCard({
   const estadoClase = estado.toLowerCase()
 
   return (
-    <article className="libro-card">
+    <article className={`libro-card ${esNovedad ? 'libro-card--nuevo' : ''}`}>
       <div className="libro-card__header">
         <div>
           <h2>{titulo}</h2>
@@ -28,7 +28,7 @@ function LibroCard({
 
       <p className="libro-card__resumen">{resumen}</p>
 
-      {esNovedad && <span className="novedad">Novedad</span>}
+      {esNovedad && <span className="novedad">NUEVO</span>}
     </article>
   )
 }
