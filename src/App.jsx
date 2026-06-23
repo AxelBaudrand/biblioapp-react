@@ -1,10 +1,9 @@
 import './App.css'
-import LibroCard from './components/LibroCard'
+import ListaLibros from './components/ListaLibros'
 import { libros } from './data/libros'
 
 function App() {
   console.log(libros)
-  const libroDestacado = libros[0]
 
   return (
     <main className="app">
@@ -13,9 +12,7 @@ function App() {
         <p>Catalogo inicial cargado: {libros.length} libros.</p>
       </header>
 
-      <section className="catalogo-demo" aria-label="Libro destacado">
-        <LibroCard {...libroDestacado} />
-      </section>
+      <ListaLibros libros={libros} />
     </main>
   )
 }
