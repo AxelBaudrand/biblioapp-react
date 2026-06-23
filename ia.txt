@@ -4,3 +4,4 @@ Etapa 3: se uso IA para crear ListaLibros, recorrer el catalogo con map y render
 Etapa 4: se uso IA para agregar estado controlado, filtro por estado, busqueda normalizada y mensaje condicional sin resultados.
 Parte A: se uso IA como apoyo para organizar la estructura del proyecto, revisar requisitos y mantener buenas practicas sin consumir APIs ni guardar datos locales.
 Etapa 5: se uso IA para destacar novedades, agregar contador, preparar ANALISIS.md, actualizar README.md y verificar los requisitos finales.
+Ajuste final: se uso IA para centralizar y validar con JavaScript los estados permitidos de los libros.

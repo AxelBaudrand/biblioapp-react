@@ -1,4 +1,19 @@
-export const libros = [
+export const ESTADOS_LIBRO = ['Disponible', 'Prestado', 'Reservado']
+export const OPCIONES_FILTRO_ESTADO = ['Todos', ...ESTADOS_LIBRO]
+
+export function esEstadoLibroValido(estado) {
+  return ESTADOS_LIBRO.includes(estado)
+}
+
+export function validarEstadoLibro(estado) {
+  if (esEstadoLibroValido(estado)) {
+    return estado
+  }
+
+  throw new Error(`Estado de libro invalido: ${estado}`)
+}
+
+const librosBase = [
   {
     id: 1,
     titulo: "Cien Anos de Soledad",
@@ -120,3 +135,8 @@ export const libros = [
     esNovedad: false,
   },
 ]
+
+export const libros = librosBase.map((libro) => ({
+  ...libro,
+  estado: validarEstadoLibro(libro.estado),
+}))

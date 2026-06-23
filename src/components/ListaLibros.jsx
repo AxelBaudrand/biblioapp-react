@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import LibroCard from './LibroCard'
+import { ESTADOS_LIBRO } from '../data/libros'
 
 function ListaLibros({ libros = [] }) {
   return (
@@ -18,7 +19,7 @@ ListaLibros.propTypes = {
       titulo: PropTypes.string,
       editorial: PropTypes.string,
       anio: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      estado: PropTypes.oneOf(['Disponible', 'Prestado', 'Reservado']),
+      estado: PropTypes.oneOf(ESTADOS_LIBRO),
       resumen: PropTypes.string,
       autores: PropTypes.arrayOf(PropTypes.string),
       esNovedad: PropTypes.bool,

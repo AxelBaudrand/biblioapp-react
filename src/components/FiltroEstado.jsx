@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
-
-const estados = ['Todos', 'Disponible', 'Prestado', 'Reservado']
+import { OPCIONES_FILTRO_ESTADO } from '../data/libros'
 
 function FiltroEstado({ filtroEstado = 'Todos', onChange = () => {} }) {
   return (
@@ -10,7 +9,7 @@ function FiltroEstado({ filtroEstado = 'Todos', onChange = () => {} }) {
         value={filtroEstado}
         onChange={(event) => onChange(event.target.value)}
       >
-        {estados.map((estado) => (
+        {OPCIONES_FILTRO_ESTADO.map((estado) => (
           <option key={estado} value={estado}>
             {estado}
           </option>
@@ -21,7 +20,7 @@ function FiltroEstado({ filtroEstado = 'Todos', onChange = () => {} }) {
 }
 
 FiltroEstado.propTypes = {
-  filtroEstado: PropTypes.oneOf(estados),
+  filtroEstado: PropTypes.oneOf(OPCIONES_FILTRO_ESTADO),
   onChange: PropTypes.func,
 }
 
